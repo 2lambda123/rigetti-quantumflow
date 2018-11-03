@@ -1,5 +1,5 @@
-# QuantumFlow build, run, and test 
-
+# A slimmed down requirements file for readthedocs
+quantumflow
 numpy
 scipy               >= 1.0.0
 networkx            >= 2.1
