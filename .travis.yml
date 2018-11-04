@@ -22,4 +22,6 @@ install:
 
 script:
   - pytest --disable-pytest-warnings
+  - QUANTUMFLOW_BACKEND=eager pytest --disable-pytest-warnings
+  - QUANTUMFLOW_BACKEND=torch pytest --disable-pytest-warnings
   - flake8 quantumflow examples tests tools setup.py
