@@ -14,10 +14,11 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
   - conda info -a
-  - conda install -c cvxgrp cvxpy libgcc
-  - conda install --yes --file requirements.txt
+  - conda install -c conda-forge lapack
+  - conda install -c cvxgrp cvxpy
   - conda list
 
+  - pip install -q -r requirements.txt
   - pip install .
 script:
   - pytest
