@@ -270,7 +270,7 @@ def render_latex(latex: str) -> PIL.Image:
 
 
 def circuit_to_image(circ: Circuit,
-                     qubits: Qubits = None) -> PIL.Image:
+                     qubits: Qubits = None) -> PIL.Image:   # pragma: no cover
     """Create an image of a quantum circuit.
 
     A convenience function that calls circuit_to_latex() and render_latex().

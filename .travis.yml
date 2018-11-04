@@ -16,12 +16,19 @@ install:
   - conda info -a
   - conda install -c conda-forge lapack
   - conda install -c cvxgrp cvxpy
+  - conda install -c conda-forge texlive-core 
+  - conda install -c conda-forge poppler  
   - conda list
   - pip install -q -r requirements.txt
   - pip install .
 
 script:
-  - pytest --disable-pytest-warnings
+  - python -m quantumflow.meta
+  - QUANTUMFLOW_BACKEND=numpy pytest --disable-pytest-warnings --cov=quantumflow --cov-config .toxcoveragerc --cov-fail-under 100  --cov-report term-missing tests/
   - QUANTUMFLOW_BACKEND=eager pytest --disable-pytest-warnings
   - QUANTUMFLOW_BACKEND=torch pytest --disable-pytest-warnings
   - flake8 quantumflow examples tests tools setup.py
+  - mypy -p quantumflow --ignore-missing-imports
+  - sphinx-build -M html docs/source docs/build
+  - sphinx-build -M doctest docs/source docs/build
+
