@@ -16,8 +16,6 @@ install:
   - conda info -a
   - conda install -c conda-forge lapack
   - conda install -c cvxgrp cvxpy
-  - conda install -c conda-forge texlive-core 
-  - conda install -c conda-forge poppler  
   - conda list
   - pip install -q -r requirements.txt
   - pip install .
