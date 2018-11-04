@@ -15,6 +15,7 @@ import pytest
 
 import quantumflow as qf
 
+from . import skip_unless_pdflatex
 
 def test_circuit_to_latex():
     qf.circuit_to_latex(qf.ghz_circuit(range(15)))
@@ -85,7 +86,7 @@ def test_gates_to_latex():
     print(latex)
     # qf.render_latex(latex).show()
 
-    qf.circuit_to_image(circ)
+    # qf.circuit_to_image(circ)
 
 
 def render_dependancies_installed():
@@ -96,8 +97,7 @@ def render_dependancies_installed():
     return True
 
 
-@pytest.mark.skipif(not render_dependancies_installed(),
-                    reason='Necessary external dependencies not installed')
+@skip_unless_pdflatex
 def test_render_latex():
     # TODO: Double check this circuit is correct
     circ = qf.addition_circuit(['a[0]', 'a[1]', 'a[2]', 'a[3]'],

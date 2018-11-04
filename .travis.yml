@@ -1,8 +1,8 @@
 language: python
 sudo: required
 dist: xenial
-# before_install:
-#  - sudo apt-get install -y ghostscript
+before_install:
+  - conda install -c cvxgrp cvxpy libgcc
 python:
   - "3.6"
 
