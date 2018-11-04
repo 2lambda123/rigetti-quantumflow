@@ -17,9 +17,9 @@ install:
   - conda install -c conda-forge lapack
   - conda install -c cvxgrp cvxpy
   - conda list
-
   - pip install -q -r requirements.txt
   - pip install .
+
 script:
-  - pytest
+  - pytest --disable-pytest-warnings
   - flake8 quantumflow examples tests tools setup.py

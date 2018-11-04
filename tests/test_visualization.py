@@ -7,15 +7,14 @@
 Unit tests for quantumflow.visualization
 """
 
-
 from math import pi
-import shutil
 
 import pytest
 
 import quantumflow as qf
 
 from . import skip_unless_pdflatex
+
 
 def test_circuit_to_latex():
     qf.circuit_to_latex(qf.ghz_circuit(range(15)))
@@ -87,14 +86,6 @@ def test_gates_to_latex():
     # qf.render_latex(latex).show()
 
     # qf.circuit_to_image(circ)
-
-
-def render_dependancies_installed():
-    if shutil.which('pdflatex') is None:
-        return False
-    if shutil.which('pdftocairo') is None:
-        return False
-    return True
 
 
 @skip_unless_pdflatex
