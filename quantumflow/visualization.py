@@ -225,7 +225,7 @@ def _display_layers(circ: Circuit, qubits: Qubits) -> Circuit:
     return Circuit(layers)
 
 
-def render_latex(latex: str) -> PIL.Image:
+def render_latex(latex: str) -> PIL.Image:      # pragma: no cover
     """
     Convert a single page LaTeX document into an image.
 
