@@ -8,11 +8,11 @@
 
 ## Installation for development
 
-It is easiest ot install QuantumFlow's requirements using conda.
+It is easiest to install QuantumFlow's requirements using conda.
 ```
 git clone https://github.com/rigetticomputing/quantumflow.git
 cd quantumflow
-conda install -c conda-forge --file conda_requirements.txt
+conda install -c conda-forge --file requirements.txt
 pip install -e .
 ```
 

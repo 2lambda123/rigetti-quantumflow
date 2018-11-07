@@ -11,7 +11,7 @@ Please refer to the github repository https://github.com/rigetticomputing/quantu
 Installation
 ############
 
-See the introcution for installation instructions.
+See the introduction for installation instructions.
 The Makefile contains targets for various common development tasks::
 
 	> make help
