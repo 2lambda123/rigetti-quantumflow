@@ -28,7 +28,7 @@ The current options are tensorflow, eager, pytorch, and numpy (default).
     Experimental prototype. Fast on CPU and GPU. Unfortunately stochastic gradient
     decent not available due to pytorch's lack of support for complex math.
     Pytorch is not installed by default. See the pytorch website for installation
-    instrustions.
+    instructions.
 
 
 Configuration
