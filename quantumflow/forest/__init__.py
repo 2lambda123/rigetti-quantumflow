@@ -8,14 +8,14 @@
 Quantumflow: Interface to pyQuil and the Rigetti Forest
 """
 
-from typing import Sequence, Dict, Any
+from typing import Sequence, Any
 
-import networkx as nx
+# import networkx as nx
 import PIL
-import numpy as np
+# import numpy as np
 
 from ..cbits import Register
-from ..qubits import Qubit
+# from ..qubits import Qubit
 from ..states import State
 from ..stdgates import STDGATES
 from ..ops import Gate
@@ -27,7 +27,7 @@ from ..stdops import (Reset, EQ, LT, LE, GT, GE, Add, Mul, Div, Sub, And,
                       Exchange, Ior, Move, Neg, Not, Xor)
 from ..visualization import circuit_to_latex, render_latex
 
-#from pyquil.api._quantum_computer import _get_qvm_compiler_based_on_endpoint
+# from pyquil.api._quantum_computer import _get_qvm_compiler_based_on_endpoint
 
 from . import pyquil
 
@@ -144,17 +144,17 @@ class NullCompiler(pyquil.AbstractCompiler):
         return nq_program
 
 
-def qvm_run_and_measure(circ: Circuit, trials: int = 1) \
-        -> Dict[Qubit, np.ndarray]:  # pragma: no cover
-    # Tests only run if qvm and quilc are installed locally.
-    N = circ.qubit_nb
+# def qvm_run_and_measure(circ: Circuit, trials: int = 1) \
+#         -> Dict[Qubit, np.ndarray]:  # pragma: no cover
+#     # Tests only run if qvm and quilc are installed locally.
+#     N = circ.qubit_nb
 
-    vqc = get_virtual_qc(N, compiler=NullCompiler())
+#     vqc = get_virtual_qc(N, compiler=NullCompiler())
 
-    prog = circuit_to_pyquil(circ)
-    results = vqc.run_and_measure(prog, trials)
+#     prog = circuit_to_pyquil(circ)
+#     results = vqc.run_and_measure(prog, trials)
 
-    return results
+#     return results
 
 
 def pyquil_to_image(program: pyquil.Program) -> PIL.Image:  # pragma: no cover
