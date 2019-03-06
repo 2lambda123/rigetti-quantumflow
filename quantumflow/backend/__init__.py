@@ -15,6 +15,8 @@ if BACKEND == 'tensorflow':                          # pragma: no cover
     from quantumflow.backend.tensorflowbk import *   # noqa: F403
 elif BACKEND == 'eager':                             # pragma: no cover
     from quantumflow.backend.eagerbk import *        # noqa: F403
+elif BACKEND == 'tensorflow2':                       # pragma: no cover
+    from quantumflow.backend.tensorflow2bk import *  # noqa: F403
 elif BACKEND == 'torch':                             # pragma: no cover
     from quantumflow.backend.torchbk import *        # noqa: F403
 else:                                                # pragma: no cover
