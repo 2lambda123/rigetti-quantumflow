@@ -27,6 +27,9 @@ from .numpybk import set_random_seed as np_set_random_seed
 from .numpybk import TensorLike, BKTensor
 
 TL = tf
+name = TL.__name__
+version = TL.__version__
+
 
 tf.InteractiveSession()             # TESTME: Is this safe to do?
 
