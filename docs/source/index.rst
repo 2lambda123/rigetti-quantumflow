@@ -30,6 +30,7 @@ We welcome bug reports and PRs but make no guarantee about fixes or responses*.
       gates
       channels
       circuits
+      decomp
       measures
       programs
       forest   
