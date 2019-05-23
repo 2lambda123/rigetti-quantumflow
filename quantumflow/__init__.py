@@ -21,4 +21,5 @@ from quantumflow.dagcircuit import *                        # noqa: F401,F403
 from quantumflow.visualization import *                     # noqa: F401,F403
 import quantumflow.forest                                   # noqa: F401
 import quantumflow.datasets                                 # noqa: F401
+from quantumflow.gradients import *                     	# noqa: F401,F403
 # Fin GEC 2018
